@@ -1,0 +1,29 @@
+<div class="container-fluid" id="promos">
+  <h2 class="text-center text-danger mb-4">Catálogo de Ofertas</h2>
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let product of products">
+      <div class="card product-card">
+        <div class="discount-badge">
+          {{ product.discount }}% OFF
+        </div>
+        <img [src]="product.image" class="card-img-top" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-price">
+            <span class="original-price">{{ product.originalPrice | currency:'USD':'symbol' }}</span>
+            <span class="discounted-price">{{ product.price | currency:'USD':'symbol' }}</span>
+          </p>
+          <button class="btn w-100 mt-2" (click)="addToCart(product)">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="" *ngFor="let item of cart">
+  <div class="" *ngIf="cart" >
+    <h2>{{item.description}}</h2>
+  </div>
+</div> -->
+
+  

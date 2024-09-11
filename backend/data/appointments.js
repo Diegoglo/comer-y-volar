@@ -1,0 +1,102 @@
+const appointments = {
+    "Lunes": {
+        "09:00": true,
+        "10:00": true,
+        "11:00": true,
+        "12:00": true,
+        "13:00": true,
+        "14:00": true,
+        "15:00": true,
+        "16:00": true,
+        "17:00": true,
+        "18:00": true,
+        "19:00": true,
+        "20:00": true
+    },
+    "Martes": {
+        "09:00": true,
+        "10:00": true,
+        "11:00": true,
+        "12:00": true,
+        "13:00": true,
+        "14:00": true,
+        "15:00": true,
+        "16:00": true,
+        "17:00": true,
+        "18:00": true,
+        "19:00": true,
+        "20:00": true
+    },
+    "Miércoles": {
+        "09:00": true,
+        "10:00": true,
+        "11:00": true,
+        "12:00": true,
+        "13:00": true,
+        "14:00": true,
+        "15:00": true,
+        "16:00": true,
+        "17:00": true,
+        "18:00": true,
+        "19:00": true,
+        "20:00": true
+    },
+    "Jueves": {
+        "09:00": true,
+        "10:00": true,
+        "11:00": true,
+        "12:00": true,
+        "13:00": true,
+        "14:00": true,
+        "15:00": true,
+        "16:00": true,
+        "17:00": true,
+        "18:00": true,
+        "19:00": true,
+        "20:00": true
+    },
+    "Viernes": {
+        "09:00": true,
+        "10:00": true,
+        "11:00": true,
+        "12:00": true,
+        "13:00": true,
+        "14:00": true,
+        "15:00": true,
+        "16:00": true,
+        "17:00": true,
+        "18:00": true,
+        "19:00": true,
+        "20:00": true
+    },
+    "Sábado": {
+        "09:00": true,
+        "10:00": true,
+        "11:00": false,
+        "12:00": true,
+        "13:00": true,
+        "14:00": true,
+        "15:00": true,
+        "16:00": true,
+        "17:00": false,
+        "18:00": true,
+        "19:00": true,
+        "20:00": true
+    },
+    "Domingo": {
+        "09:00": true,
+        "10:00": true,
+        "11:00": true,
+        "12:00": true,
+        "13:00": true,
+        "14:00": true,
+        "15:00": true,
+        "16:00": true,
+        "17:00": true,
+        "18:00": true,
+        "19:00": true,
+        "20:00": true
+    }
+};
+
+module.exports = appointments;

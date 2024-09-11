@@ -1,0 +1,106 @@
+.container-fluid {
+    background: linear-gradient(to right, #f2ebce, #aad243); /* Degradado entre color existente y rojo */
+}
+  
+.product-card {
+    position: relative;
+    background-color: #fdfdfd; /* Fondo blanco para la tarjeta */
+    border: 1px solid #ffcc00; /* Amarillo para el borde */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 280px; /* Ancho máximo reducido para acercar las tarjetas */
+    height: 380px; /* Altura ajustada */
+    margin: 10px auto; /* Margen reducido y auto para centralizar */
+    overflow: hidden;
+    transition: transform 0.2s;
+    font-family: 'Lobster', cursive;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajuste de la imagen */
+    border-bottom: 1px solid #ffcc00;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #d52b1e; /* Rojo intenso para el fondo del descuento */
+    color: #fff; /* Blanco para el texto */
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.card-title {
+    color: #d52b1e; /* Rojo intenso para el título */
+}
+
+.card-price {
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999; /* Gris para el precio original */
+    margin-right: 10px;
+}
+
+.discounted-price {
+    color: #d52b1e; /* Rojo intenso para el precio con descuento */
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    color: #333; /* Texto en gris oscuro */
+}
+
+/* Ajusta el contenedor de las tarjetas para que estén centradas y más juntas */
+.container-fluid .row {
+    justify-content: center; /* Centraliza las tarjetas en la pantalla */
+    gap: 15px; /* Añade espacio entre las columnas */
+}
+
+.container-fluid h2 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    animation: bounce 2s infinite; /* Aplica la animación al h1 */
+}
+
+/* Define la animación bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    40% {
+        transform: translateY(-30px); /* Sube */
+    }
+    60% {
+        transform: translateY(-10px); /* Baja un poco */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .product-card {
+        max-width: 90%; /* Ocupa la mayor parte del ancho de la columna en pantallas pequeñas */
+        margin: 5px auto; /* Reduce el margen para ajustar el espaciado en pantallas pequeñas */
+    }
+}
+
+.btn {
+    background-color: #aad243;
+}

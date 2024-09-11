@@ -1,0 +1,130 @@
+/* Estilos de Navbar */
+.navbar {
+    background-color: #FFCC00; /* Amarillo vibrante para el fondo */
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Lobster', cursive;
+}
+
+.navbar-brand {
+    color: #D52B1E; /* Rojo intenso para el nombre de la marca */
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta cualquier desbordamiento de contenido */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+}
+
+.navbar-brand i {
+    font-size: 30px; /* Tamaño del ícono */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    color: #D52B1E; /* Color del ícono */
+}
+
+.navbar-brand:hover {
+    color: #FFFFFF; /* Blanco al hacer hover */
+}
+
+.navbar-brand:hover i {
+    color: #FFFFFF; /* Blanco para el ícono al hacer hover */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #D52B1E; /* Rojo para los enlaces */
+    font-size: 18px;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #FFFFFF; /* Blanco al hacer hover */
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF; /* Subrayado en blanco al hacer hover */
+    transition: width 0.3s;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Estilos de Sidebar */
+/* Sidebar Styles */
+/* Estilos de Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Empuja el sidebar fuera de la vista inicial */
+    height: 100%;
+    width: 250px;
+    background-color: #FFCC00; /* Rojo intenso para el fondo del sidebar */
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.sidebar.active {
+    transform: translateX(250px); /* Mueve el sidebar a la vista */
+}
+
+.sidebar .close-btn {
+    background: none;
+    border: none;
+    color: #D52B1E; /* Amarillo para el botón de cerrar */
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.sidebar .sidebar-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar .sidebar-links li {
+    margin: 20px 0;
+}
+
+.sidebar .sidebar-links li a {
+    color: #FFFFFF; /* Blanco para los enlaces del sidebar */
+    font-size: 1.2em;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px; /* Opcional: añade bordes redondeados a los enlaces */
+}
+
+.sidebar .sidebar-links li a:hover {
+    color: #D52B1E; /* Amarillo al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco translúcido al hacer hover */
+}
+
+.sidebar .sidebar-links li a.active {
+    color: #D52B1E; /* Amarillo para el enlace activo */
+    background-color: rgba(226, 0, 0, 0.2); /* Fondo blanco translúcido para el enlace activo */
+}
+
+  

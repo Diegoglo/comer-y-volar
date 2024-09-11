@@ -1,0 +1,16 @@
+<div class="container-fluid mt-0 " id="menu">
+  <h1 class="text-danger">Menú</h1>
+  <div class="row">
+    <!-- Product Card -->
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-4 mt-4" *ngFor="let product of productos">
+      <div class="card product-card">
+        <img [src]="product.image" class="card-img-top" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-price">{{ product.price | currency:'USD':'symbol' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

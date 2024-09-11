@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" routerLink="/">
+    <i class="fas fa-feather-alt"></i> Comer y Llevar
+  </a>    
+  <button class="navbar-toggler" type="button"  (click)="toggleSidebar()" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/home']" (click)="setActive('home')">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutUs" (click)="setActive('product-info')">Sobre nosotros</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#menu" (click)="setActive('services')">Menú</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#promos" (click)="setActive('contact')">Promociones</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#locales" (click)="setActive('locales')">Locales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']" (click)="setActive('signin')">SignIn</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="sidebar" [ngClass]="{'active': isSidebarOpen}">
+  <button class="close-btn" (click)="closeSidebar()">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul class="sidebar-links">
+    <li><a [routerLink]="['/home']" [ngClass]="{'active': activeLink === 'home'}" (click)="setActive('home')">Inicio</a></li>
+    <li><a href="#aboutUs" [ngClass]="{'active': activeLink === 'product-info'}" (click)="setActive('product-info')">Sobre nosotros</a></li>
+    <li><a href="#menu" [ngClass]="{'active': activeLink === 'services'}" (click)="setActive('services')">Menú</a></li>
+    <li><a href="#promos" [ngClass]="{'active': activeLink === 'contact'}" (click)="setActive('contact')">Promociones</a></li>
+    <li><a href="#locales" [ngClass]="{'active': activeLink === 'locales'}" (click)="setActive('contact')">Locales</a></li>
+    <li><a [routerLink]="['/login']" [ngClass]="{'active': activeLink === 'signin'}" (click)="setActive('signin')">SignIn</a></li>
+  </ul>
+</div>

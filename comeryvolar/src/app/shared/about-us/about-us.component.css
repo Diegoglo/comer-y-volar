@@ -1,0 +1,66 @@
+/* Estilos para el contenedor del componente */
+.about-container {
+    background: linear-gradient(to right, #f2ebce, #aad243); /* Degradado entre color existente y rojo */
+    color: #D52B1E; /* Rojo intenso para el texto */
+    padding: 40px 0;
+    font-family: 'Lobster', cursive;
+}
+
+/* Estilo para la imagen de la empresa */
+.about-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Asegura que la imagen sea 100% del ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+    margin-left: 0; /* Resetea margen */
+}
+
+/* Estilo para los encabezados */
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    .about-container {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .about-image img {
+        width: 100%;
+        margin-left: 0; /* Asegura que la imagen ocupe todo el ancho disponible en móviles */
+    }
+
+    h2 {
+        font-size: 28px; /* Reduce el tamaño del encabezado en pantallas pequeñas */
+    }
+
+    p {
+        font-size: 16px; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+.aboutUs{
+    animation: bounce 2s infinite; /* Aplica la animación al h1 */
+}
+/* Define la animación bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    40% {
+        transform: translateY(-20px); /* Sube */
+    }
+    60% {
+        transform: translateY(-10px); /* Baja un poco */
+    }
+}
